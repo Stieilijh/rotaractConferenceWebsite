@@ -46,19 +46,21 @@ function toggleMenu() {
 // toggle for showing which day for flow of events
 
 function showDay(day) {
-  let day1Table = document.getElementById("day1")
-  let day2Table = document.getElementById("day2")
+  document.querySelectorAll(".event-table").forEach((table, index) => {
+    if (index + 1 === day) {
+      table.classList.add("active")
+    } else {
+      table.classList.remove("active")
+    }
+  })
 
-  if (day === 1) {
-    day1Table.classList.add("active")
-    day2Table.classList.remove("active")
-  } else {
-    day2Table.classList.add("active")
-    day1Table.classList.remove("active")
-  }
-
-  // Highlight active button
-  let buttons = document.querySelectorAll(".toggle-btn")
-  buttons.forEach((btn) => btn.classList.remove("active"))
-  buttons[day - 1].classList.add("active")
+  // Update button styling
+  document.querySelectorAll(".toggle-btn").forEach((btn, index) => {
+    btn.classList.toggle("active", index + 1 === day)
+  })
 }
+
+// Show Day 1 by default
+document.addEventListener("DOMContentLoaded", function () {
+  showDay(1)
+})

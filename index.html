@@ -82,95 +82,72 @@
     <h2>Flow of Events</h2>
 
     <!-- Toggle Buttons -->
-    <div class="toggle-buttons">
+    <div class="event-container">
         <button class="toggle-btn active" onclick="showDay(1)">Day 1</button>
         <button class="toggle-btn" onclick="showDay(2)">Day 2</button>
-    </div>
 
-    <!-- Day 1 Schedule -->
-    <div id="day1" class="event-table">
-        <table>
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Programme</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>9:30 AM - 10:00 AM</td>
-                    <td>Registration & Welcome</td>
-                </tr>
-                <tr>
-                    <td>10:00 AM - 11:00 AM</td>
-                    <td>Keynote Speech</td>
-                </tr>
-                <tr>
-                    <td>11:00 AM - 11:15 AM</td>
-                    <td>Tea Break</td>
-                </tr>
-                <tr>
-                    <td>11:15 AM - 12:30 PM</td>
-                    <td>Panel Discussion</td>
-                </tr>
-                <tr>
-                    <td>12:30 PM - 2:00 PM</td>
-                    <td>Lunch & Networking</td>
-                </tr>
-                <tr>
-                    <td>2:00 PM - 3:30 PM</td>
-                    <td>Workshop Session</td>
-                </tr>
-                <tr>
-                    <td>3:30 PM - 5:00 PM</td>
-                    <td>Closing Ceremony & Awards</td>
-                </tr>
-            </tbody>
+        <!-- Day 1 Table -->
+        <table id="day1" class="event-table active">
+            <tr>
+                <th>Time</th>
+                <th>Program</th>
+            </tr>
+            <tr>
+                <td>9:30 AM</td>
+                <td>Opening Ceremony</td>
+            </tr>
+            <tr>
+                <td>10:30 AM</td>
+                <td>Guest Speech</td>
+            </tr>
+            <tr>
+                <td>12:00 PM</td>
+                <td>Lunch Break</td>
+            </tr>
+            <tr>
+                <td>1:30 PM</td>
+                <td>Technical Sessions</td>
+            </tr>
+            <tr>
+                <td>3:30 PM</td>
+                <td>Networking Event</td>
+            </tr>
+            <tr>
+                <td>5:00 PM</td>
+                <td>Closing Remarks</td>
+            </tr>
         </table>
-    </div>
 
-    <!-- Day 2 Schedule -->
-    <div id="day2" class="event-table" style="display: none;">
-        <table>
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Programme</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>9:30 AM - 10:00 AM</td>
-                    <td>Morning Yoga</td>
-                </tr>
-                <tr>
-                    <td>10:00 AM - 11:30 AM</td>
-                    <td>Technical Workshop</td>
-                </tr>
-                <tr>
-                    <td>11:30 AM - 11:45 AM</td>
-                    <td>Tea Break</td>
-                </tr>
-                <tr>
-                    <td>11:45 AM - 1:00 PM</td>
-                    <td>Guest Lecture</td>
-                </tr>
-                <tr>
-                    <td>1:00 PM - 2:30 PM</td>
-                    <td>Lunch & Networking</td>
-                </tr>
-                <tr>
-                    <td>2:30 PM - 4:00 PM</td>
-                    <td>Hands-on Coding Challenge</td>
-                </tr>
-                <tr>
-                    <td>4:00 PM - 5:00 PM</td>
-                    <td>Farewell & Feedback Session</td>
-                </tr>
-            </tbody>
+        <!-- Day 2 Table -->
+        <table id="day2" class="event-table">
+            <tr>
+                <th>Time</th>
+                <th>Program</th>
+            </tr>
+            <tr>
+                <td>9:30 AM</td>
+                <td>Workshop Session</td>
+            </tr>
+            <tr>
+                <td>11:00 AM</td>
+                <td>Panel Discussion</td>
+            </tr>
+            <tr>
+                <td>12:30 PM</td>
+                <td>Lunch Break</td>
+            </tr>
+            <tr>
+                <td>2:00 PM</td>
+                <td>Hackathon</td>
+            </tr>
+            <tr>
+                <td>4:30 PM</td>
+                <td>Awards & Closing Ceremony</td>
+            </tr>
         </table>
     </div>
 </section>
+
 
 
 
