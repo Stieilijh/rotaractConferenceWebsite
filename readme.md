@@ -1,3 +1,3 @@
 ## Conference Website
 
-Link :
+Link : https://stieilijh.github.io/rotaractConferenceWebsite/
