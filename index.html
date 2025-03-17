@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotaract Conference</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="conf_heading">Rotaract Conference </h1>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="theme">Alokaa</h2>
+        <p class="date">April 27-28 2025</p>
+    
+        <div class="countdown">
+            <div class="box"><span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div class="box"><span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div class="box"><span id="minutes">00</span>
+                <p>Mins</p>
+            </div>
+            <div class="box"><span id="seconds">00</span>
+                <p>Secs</p>
+            </div>
+        </div>
+    
+        <div class="buttons">
+            <button class="btn">Register Now</button>
+            <button class="btn sponsor">Be a Sponsor</button>
+        </div>
+    </div>
+    <section id="about">
+        <h2>About the Conference</h2>
+        <p>Welcome to the Rotaract Conference 2025, where young leaders unite for change!</p>
+    </section>
+
+    <section id="events">
+        <h2>Don't miss these cool Offline Events</h2>
+        <ul>
+            <li>Flash Mob at Beach</li>
+            <li>Ride for life</li>
+            <li>Community Service Project</li>
+        </ul>
+    </section>
+
+    <section id="slabs">
+        <h2>Slab Details</h2>
+        <p>Coming soon...</p>
+        <button class="btn">Register Now</button>
+    </section>
+
+    <section id="prev_events">
+        <h2>Previous Fantastic Conferences</h2>
+        <p>Check out our previous cool conferences!</p>
+    </section>
+
+<section id="flow_of_events">
+    <h2>Flow of Events</h2>
+
+    <!-- Toggle Buttons -->
+    <div class="toggle-buttons">
+        <button class="toggle-btn active" onclick="showDay(1)">Day 1</button>
+        <button class="toggle-btn" onclick="showDay(2)">Day 2</button>
+    </div>
+
+    <!-- Day 1 Schedule -->
+    <div id="day1" class="event-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Programme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:30 AM - 10:00 AM</td>
+                    <td>Registration & Welcome</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM - 11:00 AM</td>
+                    <td>Keynote Speech</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM - 11:15 AM</td>
+                    <td>Tea Break</td>
+                </tr>
+                <tr>
+                    <td>11:15 AM - 12:30 PM</td>
+                    <td>Panel Discussion</td>
+                </tr>
+                <tr>
+                    <td>12:30 PM - 2:00 PM</td>
+                    <td>Lunch & Networking</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 3:30 PM</td>
+                    <td>Workshop Session</td>
+                </tr>
+                <tr>
+                    <td>3:30 PM - 5:00 PM</td>
+                    <td>Closing Ceremony & Awards</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Day 2 Schedule -->
+    <div id="day2" class="event-table" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Programme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:30 AM - 10:00 AM</td>
+                    <td>Morning Yoga</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM - 11:30 AM</td>
+                    <td>Technical Workshop</td>
+                </tr>
+                <tr>
+                    <td>11:30 AM - 11:45 AM</td>
+                    <td>Tea Break</td>
+                </tr>
+                <tr>
+                    <td>11:45 AM - 1:00 PM</td>
+                    <td>Guest Lecture</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM - 2:30 PM</td>
+                    <td>Lunch & Networking</td>
+                </tr>
+                <tr>
+                    <td>2:30 PM - 4:00 PM</td>
+                    <td>Hands-on Coding Challenge</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM - 5:00 PM</td>
+                    <td>Farewell & Feedback Session</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+    <section id="merch">
+        <h2>Designer Merch</h2>
+        <p>Buy our merch at very low price and spread the joy of Aloka</p>
+    </section>
+
+    <section id="reasons">
+        <h2>Reasons to attend Aloka</h2>
+        <p>It's very interesting so attend it.🔫</p>
+    </section>
+
+    <section id="sponsors">
+        <h2>Our Sponsors</h2>
+        <p>Thank you to our generous sponsors.</p>
+    </section>
+
+
+    <footer>
+        <p style="text-align: center;">© 2025 Rotaract Conference. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
