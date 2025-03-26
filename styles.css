@@ -1,11 +1,24 @@
+@font-face {
+    font-family: cinema;
+    src: url(/assets/fonts/cinema1.ttf);
+}
+@font-face {
+    font-family: text;
+    src: url(/assets/fonts/text.otf);
+}
+h2{
+    font-family: cinema  ;
+    font-size: 2.5rem;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: text, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     width: 100%;
 }
 section {
+    text-align: center;
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -22,7 +35,9 @@ section {
     height: 35%;
     color: #333;
 }
-
+.bgc-danger{
+    background-color: #c9352a;
+}
 /* Showcase */
 #showcase,#countdown{
         display: flex;
@@ -34,6 +49,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1%;
 }
 /* Medium screens: Stack in 2x2 grid */
 @media (max-width: 992px) {
@@ -139,4 +155,22 @@ section {
     display: none;
     color: black;
     font-size: 1rem;
+}
+/*Video*/
+.video-container {
+    width: 80%;
+    max-width: 700px;
+    min-width: 200px;
+    aspect-ratio: 16 / 9;
+    /* Maintains aspect ratio */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+    margin-top: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the video fills the container */
 }
