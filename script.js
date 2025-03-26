@@ -1,5 +1,5 @@
 function updateCountdown() {
-  const eventDate = new Date("April 27, 2025 00:00:00").getTime()
+  const eventDate = new Date("April 26, 2025 00:00:00").getTime()
   const now = new Date().getTime()
   const timeLeft = eventDate - now
 
@@ -63,4 +63,31 @@ function showDay(day) {
 // Show Day 1 by default
 document.addEventListener("DOMContentLoaded", function () {
   showDay(1)
+})
+
+//animation
+document.addEventListener("DOMContentLoaded", function () {
+  let video = document.getElementById("intro-video")
+  let overlay = document.getElementById("video-overlay")
+  let blurOverlay = document.getElementById("blur-overlay")
+
+  // Check if the browser supports video
+  let canPlay = video.canPlayType("video/mp4")
+
+  if (canPlay === "") {
+    // If browser doesn’t support video, remove everything
+    overlay.style.display = "none"
+    blurOverlay.style.display = "none"
+  } else {
+    // If browser supports video, wait for it to finish
+    video.onended = function () {
+      blurOverlay.style.opacity = "0" // Fade out blur
+      overlay.style.opacity = "0" // Fade out video
+
+      setTimeout(() => {
+        overlay.style.display = "none"
+        blurOverlay.style.display = "none"
+      }, 500)
+    }
+  }
 })
