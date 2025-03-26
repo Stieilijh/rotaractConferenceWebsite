@@ -1,191 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotaract Conference</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
-
 <body>
-    <!-- Nav Section -->
-    <header>
-        <h1 id="conf_heading">Rotaract Conference </h1>
-        <!-- Hamburger Menu Icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            ☰
-        </div>
-        <nav>
-            <ul id="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#speakers">Speakers</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-<!-- Blur Overlay -->
-<div id="blur-overlay"></div>
-
-<!-- Video Overlay -->
-<div id="video-overlay">
-    <video id="intro-video" autoplay muted playsinline>
-        <source src="assets/videos/Click_camera.mp4" type="video/mp4">
-        <p id="fallback-text">Your browser does not support the video.</p>
-    </video>
-</div>
-
-
-
-
-    <div class="container">
-        <h2 class="theme">Aloka</h2>
-        <p class="date">April 26-27 2025</p>
+       <!-- Blur Overlay -->
+    <div id="blur-overlay"></div>
     
-        <div class="countdown">
-            <div class="box"><span id="days">00</span>
-                <p>Days</p>
-            </div>
-            <div class="box"><span id="hours">00</span>
-                <p>Hours</p>
-            </div>
-            <div class="box"><span id="minutes">00</span>
-                <p>Mins</p>
-            </div>
-            <div class="box"><span id="seconds">00</span>
-                <p>Secs</p>
-            </div>
-        </div>
-    
-        <div class="buttons">
-            <button class="btn">Register Now</button>
-            <button class="btn sponsor">Be a Sponsor</button>
-        </div>
+    <!-- Video Overlay -->
+    <div id="video-overlay">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="assets/videos/Click_camera.mp4" type="video/mp4">
+            <p id="fallback-text">Your browser does not support the video.</p>
+        </video>
     </div>
-    <section id="about">
-        <h2>About the Conference</h2>
-        <p>Welcome to the Rotaract Conference 2025, where young leaders unite for change!</p>
-    </section>
-
-    <section id="events">
+    <header>
+    <!-- NavBar -->
+     <nav class="navbar navbar-expand-md bg-danger navbar-dark">
+        <div class="container">
+            
+            <a href="#" class="navbar-brand">
+                <img src="assets/images/favicon.png" style="height: 4rem;margin-right: 2%;" alt="Aloka_logo">
+                <b>Rotaract Conference</b></a>
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            </div>
+     </nav></header>
+ 
+     <!-- Logo details and Countdown -->
+      <section class="p-3 m-4" id="showcase">
+                <div class="container text-center p-1" id="details">
+                    <img src="assets/images/favicon.png" style="width: 40%; max-width: 300px;min-width: 200px;" alt="Aloka_Logo">
+                    <h5>Step into a world where Rotaract meets cinematic transformation at <br>Aloka, the 2nd Annual Rotaract District
+                        Conference!</h5>
+                    <div id="btns"><a href="#" class="btn btn-danger">Register Now</a>
+                    <a href="#" class="btn btn-warning m-3">Sponsor Now</a></div>
+                </div>
+                <!-- Display the countdown timer in its elements -->
+                <div class="m-3" id="countdown">
+                    <div class="box"><span id="Days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="box"><span id="Hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="box"><span id="Mins">00</span>
+                        <p>Mins</p>
+                    </div>
+                    <div class="box"><span id="Secs">00</span>
+                        <p>Secs</p>
+                    </div>
+                </div>
+    </section>    
+    <section id="events" class="p-3  m-4">
+        <div class=" container">
         <h2>Don't miss these cool Offline Events</h2>
         <ul>
             <li>Flash Mob at Beach</li>
             <li>Ride for life</li>
             <li>Community Service Project</li>
-        </ul>
+        </ul></div>
     </section>
-
-    <section id="slabs">
+    
+    <section id="slabs" class="p-3 m-4">
+        <div class=" container">
         <h2>Slab Details</h2>
         <p>Coming soon...</p>
-        <button class="btn">Register Now</button>
+        <a href="#" class="btn btn-danger">Register Now</a>
     </section>
-
-    <section id="prev_events">
+    
+    <section id="prev_events" class="p-3 m-4">
+        <div class=" container">
         <h2>Previous Fantastic Conferences</h2>
-        <p>Check out our previous cool conferences!</p>
+        <p>Check out our previous cool conferences!</p></div>
+    </section>
+    <section id="flow_of_events" class="p-3 m-4">
+        <div class="container">
+        <h2>Flow of Events</h2>
+        <p>Coming Soon !</p></div>
     </section>
 
-<section id="flow_of_events">
-    <h2>Flow of Events</h2>
-
-    <!-- Toggle Buttons -->
-    <div class="event-container">
-        <button class="toggle-btn active" onclick="showDay(1)">Day 1</button>
-        <button class="toggle-btn" onclick="showDay(2)">Day 2</button>
-
-        <!-- Day 1 Table -->
-        <table id="day1" class="event-table active">
-            <tr>
-                <th>Time</th>
-                <th>Program</th>
-            </tr>
-            <tr>
-                <td>9:30 AM</td>
-                <td>Opening Ceremony</td>
-            </tr>
-            <tr>
-                <td>10:30 AM</td>
-                <td>Guest Speech</td>
-            </tr>
-            <tr>
-                <td>12:00 PM</td>
-                <td>Lunch Break</td>
-            </tr>
-            <tr>
-                <td>1:30 PM</td>
-                <td>Technical Sessions</td>
-            </tr>
-            <tr>
-                <td>3:30 PM</td>
-                <td>Networking Event</td>
-            </tr>
-            <tr>
-                <td>5:00 PM</td>
-                <td>Closing Remarks</td>
-            </tr>
-        </table>
-
-        <!-- Day 2 Table -->
-        <table id="day2" class="event-table">
-            <tr>
-                <th>Time</th>
-                <th>Program</th>
-            </tr>
-            <tr>
-                <td>9:30 AM</td>
-                <td>Workshop Session</td>
-            </tr>
-            <tr>
-                <td>11:00 AM</td>
-                <td>Panel Discussion</td>
-            </tr>
-            <tr>
-                <td>12:30 PM</td>
-                <td>Lunch Break</td>
-            </tr>
-            <tr>
-                <td>2:00 PM</td>
-                <td>Hackathon</td>
-            </tr>
-            <tr>
-                <td>4:30 PM</td>
-                <td>Awards & Closing Ceremony</td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-
-
-
-    <section id="merch">
-        <h2>Designer Merch</h2>
-        <p>Buy our merch at very low price and spread the joy of Aloka</p>
+    <section id="merch" class="p-3 m-4">
+        <div class="container"><h2>Designer Merch</h2>
+        <p>Buy our merch at very low price and spread the joy of Aloka</p></div>
     </section>
-
-    <section id="reasons">
+    
+    <section id="reasons" class="p-3 m-4"><div class="container">
         <h2>Reasons to attend Aloka</h2>
-        <p>It's very interesting so attend it.🔫</p>
+        <p>It's very interesting so attend it.🔫</p></div>
     </section>
-
-    <section id="sponsors">
+    
+    <section id="sponsors" class="p-3 m-4"><div class="container">
         <h2>Our Sponsors</h2>
-        <p>Thank you to our generous sponsors.</p>
+        <p>Thank you to our generous sponsors.</p></div>
     </section>
 
-
-    <footer>
-        <p style="text-align: center;">© 2025 Rotaract Conference. All Rights Reserved.</p>
-    </footer>
-<script src="script.js" defer></script>
-<script>
-    document.getElementById("intro-video").playbackRate = 2;
-</script>
+        <footer>
+            <p style="text-align: center;">© 2025 Rotaract Conference. All Rights Reserved.</p>
+        </footer>
+      <!-- script tags -->
+       <script src="script.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -3,491 +3,92 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    width: 100%;
 }
-
-header {
-    background: #B22222;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#conf_heading {
-    width: 30%;
-    font-size: 20px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
 section {
-    padding: 40px;
     background: white;
-    margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-h2 {
-    color: #B22222;
-}
-
-
-
-button {
-    background: #B22222;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* -------- COUNTDOWN STYLES -------- */
-.container {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.theme {
-    font-family: 'Pacifico', cursive;
-    font-size: 36px;
-    color: #d77a61;
-    text-shadow: 2px 2px #fff;
-}
-
-.date {
-    font-size: 20px;
-    color: #B22222;
-    font-weight: bold;
-}
-
-/* Countdown Timer */
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px auto;
-    flex-wrap: wrap;
-}
-
 .box {
     background: #FFD166;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 5px 5px 3px #D87C0C;
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
-    width: 80px;
+    width: 35%;
+    height: 35%;
     color: #333;
 }
 
-.box span {
-    font-size: 32px;
-    display: block;
+/* Showcase */
+#showcase,#countdown{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
 }
-
-/* Buttons */
-.buttons {
-    margin-top: 20px;
+#details{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
-
-.btn {
-    background: #B22222;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.sponsor {
-    background: #FF8C00;
-}
-
-/* -------- RESPONSIVE STYLES -------- */
-
-/* For tablets and smaller screens */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #conf_heading {
-        width: 100%;
-        font-size: 22px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding-top: 10px;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .countdown {
-        flex-direction: row;
+/* Medium screens: Stack in 2x2 grid */
+@media (max-width: 992px) {
+    #countdown {
+        gap: 1rem;
+        justify-content: center;
+        flex: 1 1 50%;
         flex-wrap: wrap;
     }
 
     .box {
-        width: 60px;
-        padding: 15px;
-        font-size: 20px;
-    }
-
-    .box span {
-        font-size: 28px;
-    }
-
-    .theme {
-        font-size: 28px;
+        width: 6rem;
+        height: 6rem;
     }
 }
 
-/* For mobile phones */
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    .theme {
-        font-size: 24px;
-    }
-
-    .countdown {
+@media (max-width: 768px) {
+    #countdown {
         flex-direction: column;
-        align-items: center;
+        gap: 1rem;
     }
 
     .box {
-        width: 70px;
-        padding: 10px;
-        font-size: 18px;
-        margin-bottom: 10px;
+        width: 6rem;
+        height: 6rem;
     }
 
-    .box span {
-        font-size: 24px;
-    }
-
-    .buttons {
+    #showcase {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 80%;
-        font-size: 16px;
+        text-align: center;
+        gap: 1.5rem;
     }
 }
-
 
 /* -------- BUTTON HOVER EFFECTS -------- */
 
 .btn {
-    background: #B22222;
-    color: white;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1rem;
     cursor: pointer;
-    margin: 5px;
+    margin: 10px;
     transition: all 0.3s ease-in-out;
+}
+#btns{
+    display: flex;
+    align-items: center;
 }
 
 /* Hover effect: Darken background */
 .btn:hover {
-    background: #8B1A1A;
     transform: scale(1.05);
 }
 
-.sponsor {
-    background: #FF8C00;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover effect: Brighten background */
-.sponsor:hover {
-    background: #FFA500;
-    transform: scale(1.05);
-}
-
-/* -------- NAVBAR STYLES -------- */
-header {
-    background: #B22222;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    flex-wrap: nowrap;
-    /* Prevents items from wrapping */
-    white-space: nowrap;
-}
-
-/* Default Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    /* Add spacing between nav items */
-    flex-wrap: nowrap;
-    /* Prevent wrapping */
-}
-
-nav ul li {
-    margin: 0;
-    padding: 5px 15px;
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
-}
-
-/* -------- NAVBAR HOVER EFFECTS -------- */
-nav ul li a:hover {
-    color: #FFD166;
-}
-
-nav ul li a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background: #FFD166;
-    transition: width 0.3s ease-in-out;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* -------- HAMBURGER MENU FOR MOBILE -------- */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 1000;
-}
-
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-    nav ul {
-        visibility: hidden;
-        /* Keep hover effects active */
-        opacity: 0;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #B22222;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        padding: 10px 0;
-        transition: visibility 0.3s, opacity 0.3s ease-in-out;
-    }
-
-    nav ul.active {
-        visibility: visible;
-        opacity: 1;
-        display: flex;
-    }
-
-    /* Increase spacing between mobile menu items */
-    nav ul li {
-        padding: 10px 20px;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-
-/* Flow of Events Section */
-#flow_of_events {
-    text-align: center;
-    padding: 40px;
-    background: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Toggle Buttons */
-.toggle-buttons {
-    margin-bottom: 20px;
-}
-
-.toggle-btn {
-    background: #B22222;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.toggle-btn.active {
-    background: #FFD166;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Table Styling */
-.event-table {
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-    /* Allows scrolling on smaller screens */
-}
-
-table {
-    width: 80%;
-    max-width: 800px;
-    border-collapse: collapse;
-    background: #FFD166;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-th,
-td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 2px solid #D87C0C;
-}
-
-th {
-    background: #B22222;
-    color: white;
-    font-size: 18px;
-}
-
-td {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Alternate row colors */
-tbody tr:nth-child(even) {
-    background: #ffe599;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    table {
-        width: 100%;
-    }
-
-    th,
-    td {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-
-/* Centering the tables */
-.event-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-direction: column;
-}
-
-/* Hide inactive tables initially */
-.event-table {
-    display: none;
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-/* Styling for the active table */
-.event-table.active {
-    display: table;
-}
-
-/* Table styles */
-.event-table th,
-.event-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
-.event-table th {
-    background-color: #B22222;
-    color: white;
-}
-
-/* Toggle buttons */
-.toggle-btn {
-    background: #B22222;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.toggle-btn.active {
-    background: #FFD166;
-    color: black;
-}
 
 /* Blur only the website (not the video) */
 #blur-overlay {
@@ -496,7 +97,7 @@ tbody tr:nth-child(even) {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 1);
     /* Light blur effect */
     backdrop-filter: blur(10px);
     z-index: 9998;
@@ -537,5 +138,5 @@ tbody tr:nth-child(even) {
 #fallback-text {
     display: none;
     color: black;
-    font-size: 18px;
+    font-size: 1rem;
 }
